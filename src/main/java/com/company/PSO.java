@@ -7,7 +7,12 @@ import java.util.Random;
 
 public class PSO {
 
-    private static AntennaArray antennaArray = new AntennaArray(3, 90);
+    private static AntennaArray antennaArray = new AntennaArray(5, 90);
+    // 0.721 1.1193 1.1193
+    private static double coefficient1 = 0.72;
+    private static double coefficient2 = 1.1;
+    private static double coefficient3 = 1.1;
+
 
 
     private static double[] getRandomValidSolutions(AntennaArray antennaArray) {
@@ -58,7 +63,7 @@ public class PSO {
         return antennae;
     }
 
-    public static PSOParticle generateValidParticle(AntennaArray antennaArray) {
+    private static PSOParticle generateValidParticle(AntennaArray antennaArray) {
         Random random = new Random();
         PSOParticle newParticle = null;
         boolean complete = false;
@@ -69,7 +74,7 @@ public class PSO {
         double lastAntennae = antennaArray.getN_antennae() / 2.0;
 
         while (!complete) {
-            for (int i = 0; i < antennaSize; i++) {
+            for (int i = 0; i < antennaSize - 1; i++) {
                 position[i] = lastAntennae * random.nextDouble();
                 velocity[i] = Math.abs(random.nextDouble() - position[i] / 2);
             }
@@ -92,141 +97,78 @@ public class PSO {
 
         Random random = new Random();
         double globalBest = 0;
+        double[] bestPosition = new double[antennaArray.getN_antennae()];
+        int antennaSize = antennaArray.getN_antennae();
 
         double[][] bounds = antennaArray.bounds();
         ArrayList<PSOParticle> psoParticles = new ArrayList<>();
 //            double[] secondFeasiblePosition = getRandomValidSolutions(antennaArray);
 
+        // Initialise population
         for (int i = 0; i < noOfParticles; i++) {
             PSOParticle particle = generateValidParticle(antennaArray);
             psoParticles.add(particle);
 
             double evaluateParticle = antennaArray.evaluate(particle.getCurrentPosition());
-            if(globalBest == 0){
-
+            // Set global best to lowest of the population
+            if (globalBest == 0) {
+                globalBest = evaluateParticle;
+                bestPosition = particle.getCurrentPosition();
+            } else if (Math.abs(evaluateParticle) < Math.abs(globalBest)) {
+                globalBest = evaluateParticle;
+                bestPosition = particle.getCurrentPosition();
             }
         }
-//            particles[i][1] = secondFeasiblePosition[i] - particles[i][0] / 2;
 
+        while (current < limit) {
 
-        // Set velocity
+            for (PSOParticle particle : psoParticles) {
+                boolean complete = false;
+                while (!complete) {
 
-        // Initialise population
+                    double[] newPosition = particle.setCurrentVelocity(bestPosition, coefficient1, coefficient2, coefficient3, antennaSize);
+                    //Check if new position is valid, if it isn't we don't evaluate the new position as it never gets set
+                    if (antennaArray.is_valid(newPosition)) {
+                        particle.setCurrentPosition(newPosition);
+                        complete = true;
 
-////        double[][] particles = new double[noOfParticles][3];
-//        for (int i = 0; i < particles.length; i++) {
-//
-//            for (int j = 0; j < particles.length; j++) {
-//                double[] validParticles = getRandomValidSolutions(antennaArray);
-//                particles[i][0] = validParticles[j];
-////            particles[particles.length - 1][0] = antennaArray.getN_antennae() / 2.0;
-//
-//            }
+                    }
 
+                }
 
-//            // Set personal best
-//            particles[i][2] = particles[i][0];
-//        }
+                double newEvaluation = antennaArray.evaluate(particle.getCurrentPosition());
 
-//            if ((particles[i][0] - particles[i + 1][0] >= 0.25 || particles[i + 1][0] - particles[i][0] >= 0.25) && antennaArray.is_valid(particles[i])) {
-//
-//                particles[i][0] = randomValue;
-//
-//            }
-//        globalBest[particles.length - 1] = antennaArray.getN_antennae() / 2.0;
+                if (Math.abs(newEvaluation) < Math.abs(antennaArray.evaluate(particle.getPersonalBestPosition()))) {
+                    particle.setPersonalBestPosition(particle.getCurrentPosition());
+                }
 
-//        while (current < limit) {
-//            for (int j = 0; j < particles.length - 1; j++) {
-//                if (particles[j][2] >= particles[j + 1][2]) {
-//                    globalBest = particles[j][2];
-//                }
-//
-//                for (int i = 0; i < particles.length - 1; i++) {
-//                    // Update global best
-//
-//                    double rangeMin = bounds[i][0];
-//                    double rangeMax = bounds[i][1];
-//                    double randomValue = rangeMin + (rangeMax + rangeMin) * r.nextDouble();
-//
-//
-//                    particles[i][0] = particles[i][1];
-//
-//                    if (antennaArray.evaluate(particles[i]) > globalBest) {
-//                        particles[i][2] = antennaArray.evaluate(particles[i]);
-//                    }
-//
-//                    if (antennaArray.evaluate(particles[i]) > particles[i][2]) {
-//                        particles[i][2] = antennaArray.evaluate(particles[i]);
-//                    }
-//
-//                    if ((particles[i][0] - particles[i + 1][0] >= 0.25 || particles[i + 1][0] - particles[i][0] >= 0.25) && antennaArray.is_valid(particles[i])) {
-////
-//                        if (particles[i][0] < particles[i][2]) {
-//                            particles[i][2] = particles[i][2];
-//                        }
-////                particles[i][0] = randomValue;
-//                        System.out.println("Is valid method: " + antennaArray.is_valid(particles[i]));
-//
-//                    }
-//
-//                }
-//
-//            }
-//            current = System.currentTimeMillis() / 1000;
-//
-//        }
+                if (Math.abs(newEvaluation) < Math.abs(globalBest)) {
+                    globalBest = antennaArray.evaluate(particle.getCurrentPosition());
+                    bestPosition = particle.getCurrentPosition();
+                }
 
-//        while (current < limit) {
-//            for (int i = 0; i < particles.length - 1; i++) {
-//
-//                particles[i][0] = randomValue;
-//
-//
-//                for (int j = 0; j < particles.length - 1; j++) {
-//
-//                    if ((particles[j][0] - particles[j + 1][0] >= 0.25 || particles[j + 1][0] - particles[j][0] >= 0.25) && antennaArray.is_valid(particles[j])) {
-//
-//                        System.out.println(particles[j] + " at position: " + j);
-//
-////                        if (antennaArray.evaluate(particles[j]) >= particlesPersonalBest[j]) {
-////                            particlesPersonalBest[j] = antennaArray.evaluate(particles);
-//////                            if (antennaArray.evaluate(particles) > globalBest) {
-//////                                globalBest = antennaArray.evaluate(particles);
-//////                                System.out.println("Global best updated: " + globalBest);
-//////                            }
-////                        }
-//
-//                    }
-//
-//
-//                }
-//
-//            }
-//            current = System.currentTimeMillis() / 1000;
-//
-//        }
+            }
 
-//        System.out.println("Global best is: " + Arrays.toString(globalBest));
-//        Arrays.sort(particlesPersonalBest);
-//        System.out.println("Personal best is : " + particlesPersonalBest[0]);
+            current = System.currentTimeMillis() / 1000;
 
-
-//        System.out.println("The last antennae is: " + Arrays.toString(particles[particles.length - 1]));
-//        System.out.println("Length of antenna is: " + particles.length);
-//        System.out.println("The global best peak SSL is: " + antennaArray.evaluate(particles));
-//        System.out.println("The bounds are: " + Arrays.deepToString(bounds));
-//        System.out.println("Antennae : " + Arrays.deepToString(particles));
+        }
+        System.out.println(globalBest);
+        System.out.println(Arrays.toString(bestPosition));
     }
 
 
     public static void main(String[] args) {
 
+
+        particleSwarmOptimisation(antennaArray, 50, 5);
+
+//        double[] design = {0.21232823219548,0.9383773570070979,1.5};
+//        System.out.println(antennaArray.is_valid(design));
+//        System.out.println(antennaArray.evaluate(design));
+
+
 //        getRandomValidSolutions(antennaArray);
-
-//        particleSwarmOptimisation(antennaArray, 10, 20);
-//        double[][] a = antennaArray.bounds();
-
-        generateValidParticle(antennaArray);
+//        generateValidParticle(antennaArray);
 
     }
 
