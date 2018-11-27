@@ -5,10 +5,10 @@ public class PSOParticle {
     private double[] currentVelocity;
     private double[] personalBestPosition;
 
-    PSOParticle(double[] currentPosition, double[] currentVelocity, double personalBestPosition[]) {
+    PSOParticle(double[] currentPosition, double[] currentVelocity) {
         this.currentPosition = currentPosition;
         this.currentVelocity = currentVelocity;
-        this.personalBestPosition = personalBestPosition;
+//        this.personalBestPosition = personalBestPosition;
     }
 
     public void setCurrentPosition(double[] currentPosition) {
