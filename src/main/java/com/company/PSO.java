@@ -7,11 +7,12 @@ import java.util.Random;
 
 public class PSO {
 
-    private static AntennaArray antennaArray = new AntennaArray(5, 90);
-    // 0.721 1.1193 1.1193
-    private static double coefficient1 = 0.72;
-    private static double coefficient2 = 1.1;
-    private static double coefficient3 = 1.1;
+    private static AntennaArray antennaArray = new AntennaArray(3, 90);
+    // 0.721 1.1193 1.1193 3 90
+    // 0.1 1.0 1.0 5 55
+    private static double coefficient1 = 0.721;
+    private static double coefficient2 = 1.1193;
+    private static double coefficient3 = 1.1193;
 
 
 
@@ -76,7 +77,7 @@ public class PSO {
         while (!complete) {
             for (int i = 0; i < antennaSize - 1; i++) {
                 position[i] = lastAntennae * random.nextDouble();
-                velocity[i] = Math.abs(random.nextDouble() - position[i] / 2);
+                velocity[i] = random.nextDouble() - position[i] / 2;
             }
 
             position[antennaSize - 1] = lastAntennae;
@@ -102,7 +103,6 @@ public class PSO {
 
         double[][] bounds = antennaArray.bounds();
         ArrayList<PSOParticle> psoParticles = new ArrayList<>();
-//            double[] secondFeasiblePosition = getRandomValidSolutions(antennaArray);
 
         // Initialise population
         for (int i = 0; i < noOfParticles; i++) {
@@ -114,13 +114,14 @@ public class PSO {
             if (globalBest == 0) {
                 globalBest = evaluateParticle;
                 bestPosition = particle.getCurrentPosition();
-            } else if (Math.abs(evaluateParticle) < Math.abs(globalBest)) {
+            } else if (evaluateParticle < globalBest) {
                 globalBest = evaluateParticle;
                 bestPosition = particle.getCurrentPosition();
             }
         }
-
-        while (current < limit) {
+        int iterations = 30;
+//        while (current < limit) {
+        for (int i = 0; i < iterations ; i++) {
 
             for (PSOParticle particle : psoParticles) {
                 boolean complete = false;
@@ -138,20 +139,21 @@ public class PSO {
 
                 double newEvaluation = antennaArray.evaluate(particle.getCurrentPosition());
 
-                if (Math.abs(newEvaluation) < Math.abs(antennaArray.evaluate(particle.getPersonalBestPosition()))) {
+                if (newEvaluation < antennaArray.evaluate(particle.getPersonalBestPosition())) {
                     particle.setPersonalBestPosition(particle.getCurrentPosition());
                 }
 
-                if (Math.abs(newEvaluation) < Math.abs(globalBest)) {
+                if (newEvaluation < globalBest) {
                     globalBest = antennaArray.evaluate(particle.getCurrentPosition());
                     bestPosition = particle.getCurrentPosition();
                 }
 
             }
 
-            current = System.currentTimeMillis() / 1000;
+//            current = System.currentTimeMillis() / 1000;
 
         }
+
         System.out.println(globalBest);
         System.out.println(Arrays.toString(bestPosition));
     }
@@ -160,7 +162,7 @@ public class PSO {
     public static void main(String[] args) {
 
 
-        particleSwarmOptimisation(antennaArray, 50, 5);
+        particleSwarmOptimisation(antennaArray, 21, 5);
 
 //        double[] design = {0.21232823219548,0.9383773570070979,1.5};
 //        System.out.println(antennaArray.is_valid(design));

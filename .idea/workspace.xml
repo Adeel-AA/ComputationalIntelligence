@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java" line="129" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java" line="130" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d45e521-0331-4863-aa10-02fe6973ca03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/PSO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/PSO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/PSO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/PSOParticle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/PSO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/PSO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/TSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/TSP.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,46 +23,48 @@
     <SUITE FILE_PATH="coverage/TSP$TSP.ic" NAME="TSP Coverage Results" MODIFIED="1542833537836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.company.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TSP$PSO.ic" NAME="PSO Coverage Results" MODIFIED="1543352753493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TSP$PSO.ic" NAME="PSO Coverage Results" MODIFIED="1543851809273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.company.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="369" />
+    <option name="myElementSize" value="362" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1376585214">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="6" />
-          <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.6" value="10" />
+          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10509" />
-          <entry key="txt" value="53" />
+          <entry key="java" value="15605" />
+          <entry key="txt" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10509" />
-          <entry key="Scratch" value="53" />
+          <entry key="JAVA" value="15605" />
+          <entry key="Scratch" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="class" value="1" />
+          <entry key="java" value="6" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="6" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -81,35 +84,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2962">
-              <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+            <state relative-caret-position="340">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#generatePermutationsOfRoutes#0;class#TSP#0" />
-                <marker date="1542846089912" expanded="true" signature="4371:5102" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1567">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getRandomValidSolutions#0;class#PSO#0" />
+                <element signature="method#getCostOfRandomRoutes#0;class#TSP#0" />
+                <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
+                <element signature="method#localSearch#0;class#TSP#0" />
+                <element signature="e#4160#4171#0" expanded="true" />
+                <element signature="method#csvProblemInstance#0;class#TSP#0" />
+                <element signature="method#getCostOfAllCities#0;class#TSP#0" />
+                <element signature="method#pythagorasTheorem#0;class#TSP#0" />
+                <marker date="1543864239662" expanded="true" signature="9051:9782" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-474">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="177">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding>
                 <element signature="e#1828#1829#0" expanded="true" />
                 <element signature="e#1866#1867#0" expanded="true" />
@@ -127,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="445">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -136,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AntennaArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
+            <state relative-caret-position="100">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
@@ -147,7 +156,11 @@
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -168,6 +181,10 @@
       <find>deep</find>
       <find>noOf</find>
       <find>getRan</find>
+      <find>Math.a</find>
+      <find>&gt;</find>
+      <find>math.</find>
+      <find>Math.</find>
       <find>Math</find>
     </findStrings>
   </component>
@@ -180,10 +197,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/Main.java" />
         <option value="$PROJECT_DIR$/ulysses16.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/TSP.java" />
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/AntennaArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/TSP.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/PSO.java" />
       </list>
@@ -211,8 +228,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-205" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -223,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -270,19 +288,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;mav&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543355872961" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543870802991" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -398,11 +415,20 @@
       <workItem from="1543261189161" duration="2840000" />
       <workItem from="1543265314241" duration="77000" />
       <workItem from="1543333593152" duration="22061000" />
+      <workItem from="1543355902244" duration="786000" />
+      <workItem from="1543356795822" duration="479000" />
+      <workItem from="1543418671748" duration="1947000" />
+      <workItem from="1543486331149" duration="3711000" />
+      <workItem from="1543507380211" duration="1127000" />
+      <workItem from="1543676695641" duration="123000" />
+      <workItem from="1543747089624" duration="19958000" />
+      <workItem from="1543776934846" duration="12023000" />
+      <workItem from="1543837097309" duration="25537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224274000" />
+    <option name="totallyTimeSpent" value="289965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,9 +440,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25729167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -426,16 +452,16 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.30860215" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49947917" weight="0.37741935" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.30837005" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49947917" weight="0.38325992" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.30860215" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32903227" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.30837005" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32819384" />
       <window_info active="true" anchor="bottom" id="FindBugs-IDEA" order="12" visible="true" weight="0.32929516" />
       <window_info active="true" anchor="bottom" id="SonarLint" order="13" visible="true" weight="0.32929516" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -448,7 +474,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3296875" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32942432" />
       <window_info anchor="right" id="Maven" order="10" />
     </layout>
   </component>
@@ -512,36 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8/commons-lang3-3.8.jar!/org/apache/commons/lang3/ArrayUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2962">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#generatePermutationsOfRoutes#0;class#TSP#0" />
-            <marker date="1542846089912" expanded="true" signature="4371:5102" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AntennaArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="298">
+          <caret line="482" column="34" lean-forward="true" selection-start-line="482" selection-start-column="34" selection-end-line="482" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -549,17 +549,71 @@
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/AntennaArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#generatePermutationsOfRoutes#0;class#TSP#0" />
+            <element signature="method#getCostOfRandomRoutes#0;class#TSP#0" />
+            <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
+            <element signature="method#localSearch#0;class#TSP#0" />
+            <element signature="e#4160#4171#0" expanded="true" />
+            <element signature="method#csvProblemInstance#0;class#TSP#0" />
+            <element signature="method#getCostOfAllCities#0;class#TSP#0" />
+            <element signature="method#pythagorasTheorem#0;class#TSP#0" />
+            <marker date="1543864239662" expanded="true" signature="9051:9782" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="177">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
             <element signature="e#1828#1829#0" expanded="true" />
             <element signature="e#1866#1867#0" expanded="true" />
@@ -569,17 +623,6 @@
             <element signature="e#2066#2067#0" expanded="true" />
             <element signature="e#2115#2116#0" expanded="true" />
             <element signature="e#2158#2159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1567">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getRandomValidSolutions#0;class#PSO#0" />
           </folding>
         </state>
       </provider>

@@ -2,16 +2,20 @@ package com.company;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.FileReader;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TSP {
 
-    //    private static Integer[] route = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-    private static Integer[] route = {1, 2, 3, 4};
+    //    private static Integer[] route = {5, 8, 7, 14, 3, 9, 10, 4, 11, 15, 6, 12, 0, 1, 13, 2};
+//    private static Integer[] route = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    private static Integer[] route = {0, 1, 2, 3};
+
 
     private static final int A = 0;
     private static final int B = 1;
@@ -25,6 +29,76 @@ public class TSP {
             {42, 30, 0, 12},
             {35, 34, 12, 0}
     };
+
+    private static void evolutionaryAlgorithm() throws Exception {
+
+        // Initialise population
+        List<Integer[]> population = new ArrayList<>();
+        for (int j = 0; j < 10; j++) {
+            population.add(getRandomRoute(route));
+        }
+        System.out.println(Arrays.deepToString(population.toArray()));
+
+        int generations = 3000;
+//        ArrayList<ArrayList<Integer[]>> population = new ArrayList<>();
+        for (int i = 0; i < generations; i++) {
+
+            // Select parents
+            List<Integer[]> parents = getParents(population);
+            System.out.println(Arrays.deepToString(parents.toArray()));
+
+            // Swap mutation
+            for (int k = 0; k < parents.size(); k++) {
+                double bestCost = 0.0;
+                List<Integer[]> mutations = getTwoOptNeighbourhood(parents.get(k));
+                List<Integer[]> bestTour = new ArrayList<>();
+
+                for (Integer[] l : mutations) {
+                    double cost = getCostOfRoute(l);
+                    if (cost > bestCost) {
+                        bestCost = cost;
+                        bestTour.add(l);
+                    }
+                }
+                parents.set(k, bestTour.get(bestTour.size() - 1));
+                System.out.println(bestCost);
+                System.out.println(Arrays.deepToString(parents.toArray()));
+
+            }
+
+            // Survivor selection
+            population.clear();
+            population.addAll(parents);
+            for (int m = 0; m < 5 ; m++) {
+                population.add(getRandomRoute(route));
+            }
+        }
+    }
+
+    // Tournament selection - pick the best as parent
+    private static List<Integer[]> getParents(List<Integer[]> population) throws Exception {
+        List<Integer[]> parents = new ArrayList<>();
+        for (int i = 0; i < population.size(); i += 2) {
+            double firstCost = getCostOfRoute(population.get(i));
+            double secondCost = getCostOfRoute(population.get(i + 1));
+            if (firstCost < secondCost) {
+                parents.add(population.get(i));
+            } else {
+                parents.add(population.get(i + 1));
+            }
+        }
+        return parents;
+    }
+
+    private static Integer[] getRandomRoute(Integer[] route) {
+        Integer[] routeTour = route.clone();
+        Integer[] randomRoute;
+
+        Collections.shuffle(Arrays.asList(routeTour));
+
+        randomRoute = routeTour;
+        return randomRoute;
+    }
 
     private static double getCostOfRoute(Integer[] route) throws Exception {
 
@@ -43,7 +117,7 @@ public class TSP {
         }
         count += csvLookUpTable[last][original];
 
-
+//        System.out.println(count);
         return count;
     }
 
@@ -107,11 +181,37 @@ public class TSP {
 
 
             current = System.currentTimeMillis() / 1000;
-//        System.out.println(bestRoute);
+
             System.out.println(Collections.min(bestRoute));
             System.out.println(Arrays.toString(route));
         }
 
+
+    }
+
+    private static void localSearch(Integer[] route, int secondsTimeLimit) throws Exception {
+
+        long limit = (System.currentTimeMillis() / 1000) + secondsTimeLimit;
+        long current = System.currentTimeMillis() / 1000;
+        ArrayList<Double> bestCost = new ArrayList<>();
+
+        while (current < limit) {
+            Collections.shuffle(Arrays.asList(route));
+
+            List<Integer[]> twoOptRoutes = getTwoOptNeighbourhood(route);
+
+            for (int i = 0; i < twoOptRoutes.size(); i++) {
+                bestCost.add(bestNeighbourhoodStep(twoOptRoutes.get(i)));
+            }
+
+            current = System.currentTimeMillis() / 1000;
+
+            System.out.println(Arrays.toString(route));
+            System.out.println(Collections.min(bestCost));
+        }
+
+
+        System.out.println("The lowest cost is: " + Collections.min(bestCost) + " \n With the route: " + Arrays.toString(route));
 
     }
 
@@ -121,7 +221,7 @@ public class TSP {
 
         Integer swapped[] = route.clone();
 
-        for (int i = 0; i < route.length; i++)
+        for (int i = 0; i < route.length; i++) {
             for (int j = 0; j < swapped.length; j++) {
                 swapped = route.clone();
 
@@ -131,14 +231,50 @@ public class TSP {
                     swapped[j] = route[i];
                     swapped[i] = temp;
 
+
                     twoOptNeighbourhood.add(swapped);
+
 
                 }
 
             }
-        System.out.println(Arrays.deepToString(twoOptNeighbourhood.toArray()));
+        }
+
+        for (int i = 0; i < twoOptNeighbourhood.size() - 1; i++) {
+
+            for (int j = 0; j < twoOptNeighbourhood.size(); j++) {
+                if (Arrays.equals(twoOptNeighbourhood.get(i), twoOptNeighbourhood.get(j))) {
+                    twoOptNeighbourhood.remove(j);
+                }
+            }
+
+        }
+//        twoOptNeighbourhood.add(route);
+
+//        System.out.println(Arrays.deepToString(twoOptNeighbourhood.toArray()));
+
+
         return twoOptNeighbourhood;
     }
+
+    private static double bestNeighbourhoodStep(Integer[] route) throws Exception {
+        List<Integer[]> neighbourhood = getTwoOptNeighbourhood(route);
+        double shortestRoute = 0.0;
+        ArrayList<Double> costOfRoutes = new ArrayList<>();
+        List<Integer[]> routes = new ArrayList<>();
+
+        for (int i = 0; i < neighbourhood.size(); i++) {
+            costOfRoutes.add(getCostOfRoute(neighbourhood.get(i)));
+            routes.add(neighbourhood.get(i));
+        }
+
+        shortestRoute = Collections.min(costOfRoutes);
+
+        System.out.println(shortestRoute);
+        System.out.println(Arrays.toString(routes.get(routes.size() - 1)));
+        return shortestRoute;
+    }
+
 
     private static ArrayList<Double> csvProblemInstance() throws Exception {
 
@@ -188,9 +324,6 @@ public class TSP {
         ArrayList<Double> costOfCsv = new ArrayList<Double>();
         double[][] csvLookUpTable = new double[16][16];
 
-//        int counter = 1;
-//        pythagorasTheorem();
-//        int indexOfLastCity = results.size() / 2;
 
         for (int i = 0; i < results.size() / 3; i++) {
 
@@ -201,18 +334,10 @@ public class TSP {
                 double xCityNext = results.get((3 * e) + 1);
                 double yCityNext = results.get((3 * e) + 2);
 
-//                counter += 1;
 
-//
-//                if (counter == 16) {
-////              System.out.println(costOfCsv);
-//                    break;
-//                }
                 double costOfTwoCities = pythagorasTheorem(xCityA, xCityNext, yCityA, yCityNext);
                 costOfCsv.add(costOfTwoCities);
 
-
-//
             }
 
         }
@@ -234,27 +359,8 @@ public class TSP {
 
         }
 
-
         // Seed new data structure with cost of city tours.
 
-//        for (int i = 0; i < costOfCsv.size(); i++) {
-////            csvLookUpTable[0][i + 1] = costOfCsv.get(i);
-////            csvLookUpTable[i + 1][0] = costOfCsv.get(i);
-////            csvLookUpTable[i][i + 1] = costOfCsv.get(i);
-////            csvLookUpTable[i][i + 1] = costOfCsv.get(i);
-//            for (int e = 0; e < csvLookUpTable.length; e++) {
-//                csvLookUpTable[i + 1][i] = costOfCsv.get(i);
-////                csvLookUpTable[i + 1][e] = costOfCsv.get(i);
-//                for (int o = 0; o < csvLookUpTable.length; o++) {
-//                    csvLookUpTable[o][o] = 0;
-//                }
-//            }
-//        }
-        // Getting the cost of one particular route where [0][1] being
-        // from City A to City B
-//        System.out.println(csvLookUpTable[1][1]);
-
-//        System.out.println("The cost of travelling each individual city and then returning home: \n" + costOfCsv);
         return csvLookUpTable;
 
     }
@@ -271,6 +377,9 @@ public class TSP {
 
     public static void main(String[] args) throws Exception {
 
+        evolutionaryAlgorithm();
+
+
 //        System.out.println(getCostOfRandomRoutes());
 //         Integer[] route = {0,1,2,3};
 //        System.out.println(getCostOfRoute(route));
@@ -283,14 +392,20 @@ public class TSP {
 //        System.out.println(test[3][10]);
 //        Integer[] route = {0, 1, 2, 3};
 //        System.out.println(getCostOfRandomRoutes());
-//        randomSearchCpuTimeBasedTermination(1000);
-        getTwoOptNeighbourhood(route);
+//        getTwoOptNeighbourhood(route);
+
+
+//        bestNeighbourhoodStep(route);
+
+//        randomSearchCpuTimeBasedTermination(60);
+//        localSearch(route, 5);
+
 
 //        System.out.print(getCostOfRoute(route));
 //        getCostOfAllCities();
 //        generatePermutationsOfRoutes(0,route);
 
-//        getCostOfRoute();
+//        getCostOfRoute(route);
 
 //        System.out.println(pythagorasTheorem(38.24,39.57,20.42,26.15));
 
