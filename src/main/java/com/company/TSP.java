@@ -32,14 +32,16 @@ public class TSP {
 
     private static void evolutionaryAlgorithm() throws Exception {
 
+        int generations = 3000;
         // Initialise population
         List<Integer[]> population = new ArrayList<>();
+        List<Integer[]> bestTour = new ArrayList<>();
         for (int j = 0; j < 10; j++) {
             population.add(getRandomRoute(route));
         }
+
         System.out.println(Arrays.deepToString(population.toArray()));
 
-        int generations = 3000;
 //        ArrayList<ArrayList<Integer[]>> population = new ArrayList<>();
         for (int i = 0; i < generations; i++) {
 
@@ -51,7 +53,6 @@ public class TSP {
             for (int k = 0; k < parents.size(); k++) {
                 double bestCost = 0.0;
                 List<Integer[]> mutations = getTwoOptNeighbourhood(parents.get(k));
-                List<Integer[]> bestTour = new ArrayList<>();
 
                 for (Integer[] l : mutations) {
                     double cost = getCostOfRoute(l);
@@ -69,15 +70,59 @@ public class TSP {
             // Survivor selection
             population.clear();
             population.addAll(parents);
-            for (int m = 0; m < 5 ; m++) {
+            for (int m = 0; m < 5; m++) {
                 population.add(getRandomRoute(route));
             }
         }
     }
 
+    private static List<Integer[]> recombination (List<Integer[]> parents){
+        List<Integer[]> children = new ArrayList<>();
+
+        // Compare and sort population of best survivors
+        Collections.sort(parents, new Comparator<Integer[]>() {
+            @Override
+            public int compare(Integer[] o1, Integer[] o2) {
+                int i = 0;
+                try {
+                    i = (int) (getCostOfRoute(o1) - getCostOfRoute(o2));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return i;
+            }
+        });
+
+        if(parents.size)
+
+
+    }
+
     // Tournament selection - pick the best as parent
     private static List<Integer[]> getParents(List<Integer[]> population) throws Exception {
         List<Integer[]> parents = new ArrayList<>();
+
+        // Compare and sort population of best survivors
+        Collections.sort(population, new Comparator<Integer[]>() {
+            @Override
+            public int compare(Integer[] o1, Integer[] o2) {
+                int i = 0;
+                try {
+                    i = (int) (getCostOfRoute(o1) - getCostOfRoute(o2));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return i;
+            }
+        });
+
+        // Check if population size isn't even
+        if (population.size() % 2 != 0) {
+            // If not even then move the last node from population to the parent pool
+            parents.add(population.get(population.size() - 1));
+            population.remove(population.size() - 1);
+        }
+        // Add nodes with the best routes from population to the parent pool
         for (int i = 0; i < population.size(); i += 2) {
             double firstCost = getCostOfRoute(population.get(i));
             double secondCost = getCostOfRoute(population.get(i + 1));
@@ -91,12 +136,12 @@ public class TSP {
     }
 
     private static Integer[] getRandomRoute(Integer[] route) {
-        Integer[] routeTour = route.clone();
-        Integer[] randomRoute;
+//        Integer[] routeTour = route.clone();
+        Integer[] randomRoute = route.clone();
 
-        Collections.shuffle(Arrays.asList(routeTour));
+        Collections.shuffle(Arrays.asList(randomRoute));
 
-        randomRoute = routeTour;
+
         return randomRoute;
     }
 
