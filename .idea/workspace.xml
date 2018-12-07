@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d45e521-0331-4863-aa10-02fe6973ca03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/PSO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/PSO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/TSP$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/TSP$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/TSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/TSP.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,21 +42,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="940">
-              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+            <state relative-caret-position="3140">
+              <caret line="290" column="34" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#recombination#0;class#TSP#0" />
                 <element signature="method#generatePermutationsOfRoutes#0;class#TSP#0" />
                 <element signature="method#getCostOfRandomRoutes#0;class#TSP#0" />
                 <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
-                <element signature="method#localSearch#0;class#TSP#0" />
                 <element signature="method#csvProblemInstance#0;class#TSP#0" />
                 <element signature="method#getCostOfAllCities#0;class#TSP#0" />
-                <marker date="1544024363548" expanded="true" signature="10536:11267" ph="{...}" />
+                <marker date="1544218860116" expanded="true" signature="12033:12764" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -143,6 +163,7 @@
       <find>math.</find>
       <find>Math</find>
       <find>Math.</find>
+      <find>bestN</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,6 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/company/PSO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/TSP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java" />
       </list>
     </option>
   </component>
@@ -191,7 +214,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -239,13 +261,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;mav&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544024363652" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544219545306" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -253,11 +276,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Adeel\IdeaProjects\TSP" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Adeel\IdeaProjects\TSP\src\main\java\com\company" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adeel\IdeaProjects\TSP" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -379,11 +402,17 @@
       <workItem from="1544010609599" duration="4258000" />
       <workItem from="1544025424698" duration="66000" />
       <workItem from="1544025507859" duration="275000" />
+      <workItem from="1544025801887" duration="6751000" />
+      <workItem from="1544105562986" duration="22000" />
+      <workItem from="1544105605987" duration="1261000" />
+      <workItem from="1544112354052" duration="4897000" />
+      <workItem from="1544191492046" duration="37000" />
+      <workItem from="1544217304491" duration="2394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305750000" />
+    <option name="totallyTimeSpent" value="321112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,8 +425,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29637527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -407,16 +437,16 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.30837005" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.30769232" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49947917" weight="0.38325992" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" weight="0.32819384" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" visible="true" weight="0.3277592" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.30837005" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32819384" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3277592" />
       <window_info active="true" anchor="bottom" id="FindBugs-IDEA" order="12" visible="true" weight="0.32929516" />
       <window_info active="true" anchor="bottom" id="SonarLint" order="13" visible="true" weight="0.32929516" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -556,14 +586,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ulysses16.csv">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
@@ -572,18 +602,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+        <state relative-caret-position="3140">
+          <caret line="290" column="34" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#recombination#0;class#TSP#0" />
             <element signature="method#generatePermutationsOfRoutes#0;class#TSP#0" />
             <element signature="method#getCostOfRandomRoutes#0;class#TSP#0" />
             <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
-            <element signature="method#localSearch#0;class#TSP#0" />
             <element signature="method#csvProblemInstance#0;class#TSP#0" />
             <element signature="method#getCostOfAllCities#0;class#TSP#0" />
-            <marker date="1544024363548" expanded="true" signature="10536:11267" ph="{...}" />
+            <marker date="1544218860116" expanded="true" signature="12033:12764" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -49,21 +49,14 @@ public class TSP {
             List<Integer[]> parents = getParents(population);
             System.out.println(Arrays.deepToString(parents.toArray()));
 
-            // Swap mutation
-            for (int k = 0; k < parents.size(); k++) {
-                double bestCost = 0.0;
-                List<Integer[]> mutations = getTwoOptNeighbourhood(parents.get(k));
+            // 1 order recombination
+            List<Integer[]> children = recombination(parents);
 
-                for (Integer[] l : mutations) {
-                    double cost = getCostOfRoute(l);
-                    if (cost > bestCost) {
-                        bestCost = cost;
-                        bestTour.add(l);
-                    }
-                }
-                parents.set(k, bestTour.get(bestTour.size() - 1));
-                System.out.println(bestCost);
-                System.out.println(Arrays.deepToString(parents.toArray()));
+            // Swap mutation
+            List<Integer[]> mutations = new ArrayList<>();
+            for (int j = 0; j < children.size() ; j++) {
+                List<Integer[]> mutant = getTwoOptNeighbourhood(children.get(i));
+                List<Integer[]> bestRoute = bestNeighbourhoodStep(Arrays.asList(mutant.get(i)));
 
             }
 
@@ -76,10 +69,10 @@ public class TSP {
         }
     }
 
-    private static List<Integer[]> recombination (List<Integer[]> parents){
+    private static List<Integer[]> recombination(List<Integer[]> parents) {
         List<Integer[]> children = new ArrayList<>();
 
-        // Compare and sort population of best survivors
+        // Compare and sort parents
         Collections.sort(parents, new Comparator<Integer[]>() {
             @Override
             public int compare(Integer[] o1, Integer[] o2) {
@@ -93,8 +86,57 @@ public class TSP {
             }
         });
 
-        if(parents.size)
+        // Check if parents size isn't even
+        if (parents.size() % 2 != 0) {
+            // If not even then move the last node from parents to the children pool
+            children.add(parents.get(parents.size() - 1));
+            parents.remove(parents.size() - 1);
 
+        }
+
+        for (int i = 0; i < parents.size(); i += 2) {
+            Random random = new Random();
+
+            Integer[] firstParent = parents.get(i);
+            Integer[] secondParent = parents.get(i + 1);
+
+            int size = parents.get(i).length;
+            int randomPosition = random.nextInt(size); // -1?
+            int insertionPosition = randomPosition;
+
+            int amountToSwap = size / 2;
+
+            Integer[] child = new Integer[size];
+
+            int j = 0;
+            int k = 0;
+            while (j < amountToSwap) {
+                int positionToSwap = firstParent[randomPosition];
+                child[insertionPosition] = positionToSwap;
+                randomPosition++;
+                randomPosition = randomPosition % size;
+                insertionPosition = randomPosition;
+                j++;
+            }
+
+            while (k < amountToSwap) {
+                int positionToSwap = secondParent[randomPosition];
+                boolean childContainsRandomPosition = Arrays.asList(child).contains(positionToSwap);
+                if (!childContainsRandomPosition) {
+                    child[insertionPosition] = positionToSwap;
+                    insertionPosition++;
+                    insertionPosition = insertionPosition % size;
+                    k++;
+                }
+                randomPosition++;
+                randomPosition = randomPosition % size;
+            }
+
+            children.add(child);
+
+
+        }
+        return children;
 
     }
 
