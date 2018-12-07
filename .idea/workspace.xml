@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d45e521-0331-4863-aa10-02fe6973ca03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/TSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/TSP$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/TSP$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/TSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/TSP.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3140">
-              <caret line="290" column="34" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="34" />
+            <state relative-caret-position="471">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#recombination#0;class#TSP#0" />
@@ -55,26 +51,26 @@
                 <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
                 <element signature="method#csvProblemInstance#0;class#TSP#0" />
                 <element signature="method#getCostOfAllCities#0;class#TSP#0" />
-                <marker date="1544218860116" expanded="true" signature="12033:12764" ph="{...}" />
+                <marker date="1544219975382" expanded="true" signature="12032:12763" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="320">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="280">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -82,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3160">
+            <state relative-caret-position="502">
               <caret line="161" column="24" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -180,9 +176,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/PSO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/TSP.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/company/TSP.java" />
       </list>
     </option>
   </component>
@@ -268,7 +264,7 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;mav&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544219545306" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544219959688" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -407,12 +403,12 @@
       <workItem from="1544105605987" duration="1261000" />
       <workItem from="1544112354052" duration="4897000" />
       <workItem from="1544191492046" duration="37000" />
-      <workItem from="1544217304491" duration="2394000" />
+      <workItem from="1544217304491" duration="2663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321112000" />
+    <option name="totallyTimeSpent" value="321381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3160">
-          <caret line="161" column="24" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSOParticle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -600,10 +586,20 @@
         <state showInfoPanel="true" rowLines="3" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PSO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="161" column="24" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/TSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3140">
-          <caret line="290" column="34" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="34" />
+        <state relative-caret-position="471">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#recombination#0;class#TSP#0" />
@@ -612,22 +608,22 @@
             <element signature="method#randomSearchCpuTimeBasedTermination#0;class#TSP#0" />
             <element signature="method#csvProblemInstance#0;class#TSP#0" />
             <element signature="method#getCostOfAllCities#0;class#TSP#0" />
-            <marker date="1544218860116" expanded="true" signature="12033:12764" ph="{...}" />
+            <marker date="1544219975382" expanded="true" signature="12032:12763" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/company/PricingProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="320">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/company/FitnessTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>

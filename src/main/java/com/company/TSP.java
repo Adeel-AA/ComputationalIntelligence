@@ -54,7 +54,7 @@ public class TSP {
 
             // Swap mutation
             List<Integer[]> mutations = new ArrayList<>();
-            for (int j = 0; j < children.size() ; j++) {
+            for (int j = 0; j < children.size(); j++) {
                 List<Integer[]> mutant = getTwoOptNeighbourhood(children.get(i));
                 List<Integer[]> bestRoute = bestNeighbourhoodStep(Arrays.asList(mutant.get(i)));
 
