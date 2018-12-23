@@ -1,11 +1,11 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class PSO {
+public class MarketPricingPSO {
+//    private static PricingProblem pricingProblem =
 
     private static AntennaArray antennaArray = new AntennaArray(5, 55);
     // 0.721 1.1193 1.1193 3 90
@@ -138,7 +138,7 @@ public class PSO {
                 bestPosition = particle.getCurrentPosition();
             }
         }
-        int iterations = 50;
+        int iterations = 30;
 //        while (current < limit) {
         for (int i = 0; i < iterations; i++) {
             System.out.println("Iteration number: " + i);

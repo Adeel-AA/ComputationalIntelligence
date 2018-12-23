@@ -2,12 +2,12 @@ package com.company;
 
 import java.util.Random;
 
-public class PSOParticle {
+public class MarketPricingPSOParticle {
     private double[] currentPosition;
     private double[] currentVelocity;
     private double[] personalBestPosition;
 
-    PSOParticle(double[] currentPosition, double[] currentVelocity) {
+    MarketPricingPSOParticle(double[] currentPosition, double[] currentVelocity) {
         this.currentPosition = currentPosition;
         this.currentVelocity = currentVelocity;
 //        this.personalBestPosition = personalBestPosition;

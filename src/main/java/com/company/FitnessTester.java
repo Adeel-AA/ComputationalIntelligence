@@ -8,12 +8,12 @@ import java.util.Random;
 public class FitnessTester {
 
     public static void main(String[] args) {
-        int numberOfGoods = 20;
+        int numberOfGoods = 30;
         Random rng = new Random(0);
         // We are allowed to assume that prices may be anything from 1p to �10 per item.
 
         //PricingProblem f = PricingProblem.courseworkInstance();
-        PricingProblem f = PricingProblem.randomInstance(20);
+        PricingProblem f = PricingProblem.randomInstance(30);
 
         double[] prices = new double[numberOfGoods];
         double[] newPrices = new double[numberOfGoods];
